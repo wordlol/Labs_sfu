@@ -1,0 +1,108 @@
+/*сбрасываем отступы*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* это делается чтобы падинг не увеличивал ширину*/
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    color: #808080;
+    background: #ffffff;
+}
+
+:root {
+    --accent: #43b8d6;
+    --accent-dark: #109fab;
+    --dark: #3d3538;
+}
+
+/*ограничивает ширину контейнера*/
+.contener {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    position: sticky; /*закрепляет панель на верхней части сайта при скроле*/
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.header_init {
+    display: flex; /*ставит элементы в один ряд*/
+    align-items: center; /*выравнивание по вертикали*/
+    justify-content: space-between; 
+    gap: 30px;
+    height: 80px;
+}
+
+.logo {
+    display: block;
+    border-radius: 50%;
+}
+
+.nav_list {
+    display: flex;
+    gap:30px;
+    list-style:none; /*убирает точки из списка*/
+}
+
+.nav_list a {
+    text-decoration: none; /* убирает подчеркивание */
+    color: var(--dark); /* применение рутов */
+    font-weight: 600;
+    position: relative;
+    transition: color .3s ease; /* плавное изменение цвета */
+}
+
+
+.nav_list a::after /*псевдоэлементы*/ {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: color .3s ease;
+}
+
+
+.nav_list a:hover /*псевдоклассы*/ {
+    color: var(--accent);
+}
+
+.nav_list a:hover::after 
+{
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 4px solid var(--accent);
+    transition: background .3s, color .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #fff;
+    color: var(--accent);
+}
+
+.btn_small {
+    padding: 10px 22px; font-size: 16px;
+}
+
