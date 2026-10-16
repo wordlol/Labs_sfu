@@ -1,0 +1,83 @@
+.news { padding: 100px 0; background: #f7f9fa; }
+
+.news__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.news-item {
+    flex: 1 1 300px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+    transition: transform .3s ease;
+}
+
+.news-item:hover { transform: translateY(-6px); }
+
+.news-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.news-item time {
+    display: inline-block;
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.news-item h3 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.news-item a {
+    color: var(--accent-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Таблица */
+.results-title {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 28px;
+}
+
+.results {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 60px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.results th,
+.results td {
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.results th {
+    background: var(--dark);
+    color: #fff;
+}
+
+/* Чередование строк — используем :nth-child */
+.results tbody tr:nth-child(even) { background: #fafafa; }
+
+/* iframe */
+.video {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}

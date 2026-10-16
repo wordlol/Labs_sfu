@@ -1,0 +1,59 @@
+.donate {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+}
+
+.donate__inner {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.donate__text { flex: 1; }
+.donate__text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.form {
+    flex: 1;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    color: var(--dark);
+}
+
+.form label {
+    display: block;
+    font-weight: 600;
+    margin: 16px 0 8px;
+    font-size: 14px;
+}
+
+.form select,
+.form input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color .3s;
+}
+
+/* Псевдокласс :focus — когда поле в фокусе */
+.form select:focus,
+.form input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form .btn { width: 100%; margin-top: 24px; }
+
+/* calc() — смешиваем единицы измерения */
+.donate { padding: calc(80px + 5vh) 0; }
+
+@media (max-width: 900px) {
+    .donate__inner { flex-direction: column; }
+}

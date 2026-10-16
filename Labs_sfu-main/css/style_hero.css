@@ -1,0 +1,82 @@
+.hero {
+    position: relative;   /* точка отсчёта для absolute-детей */
+    height: 90vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__img {
+    position: absolute;
+    inset: 0;             /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* как background-size: cover */
+    z-index: 0;
+    animation: zoomIn 8s ease-out infinite alternate;
+}
+
+/* Затемнение поверх картинки */
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1;
+}
+
+.hero__content {
+    position: relative;   /* выше overlay по z-index */
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+
+.hero__subtitle {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeDown .8s .3s forwards;
+}
+
+.hero__title {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp .8s .5s forwards;
+}
+
+.hero__text {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    opacity: 0;
+    animation: fadeUp .8s .7s forwards;
+}
+
+/* @keyframes — описываем анимацию */
+@keyframes zoomIn {
+    from { transform: scale(1); }
+    to   { transform: scale(1.15); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 640px) {
+    .hero__title { font-size: 30px; }
+    .hero__subtitle { font-size: 16px; }
+    .hero__text { font-size: 16px; }
+}

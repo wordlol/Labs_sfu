@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Природа и люди - российский справочник где содержится информация о различных животных">
+    <meta name="keywords" content="Природа, люди, справочник, Россия, растения, климат, погода, ботника, экология">
+    <title>Природа и люди | Главная страница</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="css/style_nav.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_hero.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_about.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_work.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_news.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_donate.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_footer.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+    <!-- заглавие  ### <header>, <nav>, <ul>, <li>, <a>, <img>, <div> ### -->
+    <header class="header">
+        <div class="contener header_init">
+            <a href="#" class="logo">
+                <!-- кнопка логотипа -->
+                <img src="img/Logo.png" alt="Logo" width="240" height="100" />
+            </a>
+
+            <!-- Навигация -->
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#work">Работы</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#help">Помощь</a></li>
+                </ul>
+            </nav>
+
+            <!-- доп кнопка -->
+            <a href="#help_nature" class="btn btn_small">Помоги природе</a>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <picture>
+            <source media="(max-width: 640px)" srcset="img/sobaci1.jpg">
+            <img class="hero__img" src="img/cat.jpg" alt="Рысь">
+        </picture>
+
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content container">
+            <h2 class="hero__subtitle">Проект</h2>
+            <h1 class="hero__title">Поможем сохранить диких кошек!</h1>
+            <p class="hero__text">Снежный барс и кавказский камышовый кот нуждаются в защите.</p>
+            <a href="#help" class="btn">Поддержать проект</a>
+        </div>
+    </section>
+
+
+    <section id="about" class="about container">
+        <div class="about__text">
+            <h2>О фонде</h2>
+            <p><strong>Наша цель</strong> — сохранить уникальную живую природу России в гармонии с человеком, объединяя экспертов, ответственный бизнес и неравнодушных людей.</p>
+            <p>Мы работаем с <em>2019 года</em>, реализуем проекты от Арктики до Дагестана.</p>
+            <ul class="about__list">
+                <li><span class="dot"></span> Сохраняем редкие виды</li>
+                <li><span class="dot"></span> Развиваем технологии</li>
+                <li><span class="dot"></span> Поддерживаем ООПТ</li>
+            </ul>
+        </div>
+        <div class="about__image">
+            <img src="img/exped.jpg" alt="Команда в экспедиции">
+        </div>
+    </section>
+
+
+    <section id="work" class="work">
+    <div class="container">
+        <h2 class="section-title">Что мы делаем</h2>
+
+        <div class="cards">
+            <article class="card">
+                <img src="img/haber.jpg" alt="Растительный мир">
+                <h3>Растительный мир</h3>
+                <p>Сохраняем редкие растения и восстанавливаем леса.</p>
+                <a href="#" class="card__link">Подробнее →</a>
+            </article>
+
+            <article class="card">
+                <img src="img/animal.jpg" alt="Животный мир">
+                <h3>Животный мир</h3>
+                <p>Защищаем снежных барсов, песцов и других редких животных.</p>
+                <a href="#" class="card__link">Подробнее →</a>
+            </article>
+
+            <article class="card">
+                <img src="img/metio.jpg" alt="Климат">
+                <h3>Климат</h3>
+                <p>Развиваем климатические проекты и углеродные исследования.</p>
+                <a href="#" class="card__link">Подробнее →</a>
+            </article>
+        </div>
+    </div>
+    </section>
+
+
+    <section id="news" class="news">
+    <div class="container">
+        <h2 class="section-title">Новости</h2>
+
+        <ul class="news__list">
+            <li class="news-item">
+                <img src="img/new_3" alt="">
+                <time>02.10.2026</time>
+                <h3>В Дагестане расширят проект по сохранению камышового кота</h3>
+                <a href="#">Читать →</a>
+            </li>
+            <li class="news-item">
+                <img src="img/new_2" alt="">
+                <time>01.10.2026</time>
+                <h3>Новые технологии помогут сохранять биоразнообразие</h3>
+                <a href="#">Читать →</a>
+            </li>
+            <li class="news-item">
+                <img src="img/new_1" alt="">
+                <time>01.10.2026</time>
+                <h3>Опубликован второй рэнкинг добывающих компаний</h3>
+                <a href="#">Читать →</a>
+            </li>
+        </ul>
+
+        <!-- Таблица: итоги года -->
+        <h3 class="results-title">Итоги 2025 года</h3>
+        <table class="results">
+            <thead>
+                <tr>
+                    <th>Показатель</th>
+                    <th>Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Реализовано проектов</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Регионов присутствия</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Сохранено редких видов</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Видео с YouTube через iframe -->
+        <div class="video">
+            <iframe
+                width="100%"
+                height="500"
+                src="https://www.youtube.com/watch?v=hz6-zU3Ud4M"
+                title="О фонде"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="help" class="donate">
+    <div class="container donate__inner">
+        <div class="donate__text">
+            <h2>Сделать пожертвование</h2>
+            <p>Все проекты реализуются благодаря поддержке людей и бизнеса.</p>
+        </div>
+
+        <form class="form" action="#" method="POST">
+            <label for="amount">Сумма</label>
+            <select id="amount" name="amount">
+                <option value="300">300 ₽</option>
+                <option value="500" selected>500 ₽</option>
+                <option value="1000">1000 ₽</option>
+                <option value="5000">5000 ₽</option>
+            </select>
+
+            <label for="email">Ваш e-mail</label>
+            <input type="email" id="email" name="email" placeholder="name@mail.ru" required>
+
+            <label for="freq">Периодичность</label>
+            <select id="freq" name="freq">
+                <option value="once">Разово</option>
+                <option value="monthly">Ежемесячно</option>
+            </select>
+
+            <button type="submit" class="btn">Помочь природе</button>
+        </form>
+    </div>
+    </section>
+
+    <footer class="footer">
+    <div class="container footer__inner">
+
+        <div class="footer__col">
+            <h3>Контакты</h3>
+            <table class="contacts">
+                <tr>
+                    <td>Тел:</td>
+                    <td><a href="tel:+74957271447">+7 495 727-14-47</a></td>
+                </tr>
+                <tr>
+                    <td>E-mail:</td>
+                    <td><a href="mailto:info@naturepeople.ru">info@naturepeople.ru</a></td>
+                </tr>
+                <tr>
+                    <td>Адрес:</td>
+                    <td>Москва, Соколово-Мещерская, 14к1</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer__col">
+            <h3>Подписаться</h3>
+            <p>Раз в месяц — самое важное о природе.</p>
+            <form class="subscribe" action="#" method="POST">
+                <input type="email" placeholder="Введите ваш e-mail" required>
+                <button type="submit" class="btn btn_small">OK</button>
+            </form>
+        </div>
+
+        <div class="footer__col">
+            <h3>Мы в соцсетях</h3>
+            <ul class="socials">
+                <li><a href="#">ВК</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">Дзен</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="footer__copy">© Фонд «Природа и люди», 2026</p>
+    </footer>
+
+
+
+
+
+
+</body>
+</html>
