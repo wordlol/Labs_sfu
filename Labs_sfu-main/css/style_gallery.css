@@ -1,0 +1,311 @@
+.gallery-section 
+{ 
+	padding: 100px 0; 
+	background: #f0f5f7; 
+}
+
+/* Progressbar */
+#gallery-progress-wrap 
+{ 
+	max-width: 420px; 
+	margin: 0 auto 30px; 
+	text-align: center; 
+}
+#gallery-progress 
+{ 
+	height: 22px; 
+	border-radius: 11px; 
+	overflow: hidden; 
+}
+#gallery-progress .ui-progressbar-value 
+{ 
+	background: var(--accent); 
+}
+#gallery-progress-text 
+{ 
+	display: block; 
+	margin-top: 6px; 
+	font-weight: 600; 
+	color: #666; 
+}
+
+/* Tabs */
+#gallery-tabs 
+{ 
+	margin-bottom: 30px; 
+	background: transparent; 
+	border: none; 
+}
+#gallery-tabs .ui-tabs-nav 
+{
+    background: #fff; 
+	border: none; 
+	border-radius: 12px;
+    padding: 6px; 
+	display: flex; 
+	gap: 6px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.05);
+}
+#gallery-tabs .ui-tabs-nav li 
+{ 
+	background: transparent; 
+	border: none; 
+	margin: 0; 
+}
+#gallery-tabs .ui-tabs-nav a 
+{ 
+	color: #555; 
+	font-weight: 600; 
+	padding: 10px 22px; 
+	border-radius: 8px; 
+}
+#gallery-tabs .ui-tabs-active a 
+{ 
+	background: var(--accent); 
+	color: #fff; 
+}
+#gallery-tabs .ui-tabs-panel 
+{ 
+	padding: 0; 
+}
+
+/* Большое изображение */
+.gallery-main 
+{ 
+	display: flex; 
+	flex-direction: column; 
+	gap: 20px; 
+	margin-bottom: 40px; 
+}
+.gallery-large {
+    position: relative; 
+	background: #000; 
+	border-radius: 16px;
+    overflow: hidden; 
+	min-height: 300px;
+    display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+#gallery-large-img 
+{ 
+	max-width: 100%; 
+	max-height: 600px; 
+	display: block; 
+	object-fit: contain; 
+}
+
+.gallery-nav {
+    position: absolute; 
+	top: 50%; 
+	transform: translateY(-50%);
+    background: rgba(0,0,0,.5); 
+	color: #fff; 
+	border: none;
+    font-size: 32px; 
+	width: 50px; 
+	height: 50px; 
+	border-radius: 50%;
+    cursor: pointer; 
+	z-index: 5; 
+	transition: background .3s;
+}
+.gallery-nav:hover 
+{ 
+	background: var(--accent); 
+}
+.gallery-nav.prev 
+{ 
+	left: 16px; 
+}
+.gallery-nav.next 
+{ 
+	right: 16px; 
+}
+
+.gallery-caption 
+{
+    position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	right: 0;
+    background: rgba(0,0,0,.6); 
+	color: #fff;
+    padding: 12px 20px; 
+	text-align: center; 
+	font-weight: 600;
+}
+
+/* Slider */
+.gallery-slider-wrap 
+{
+    display: flex; 
+	align-items: center; 
+	gap: 10px;
+    background: #fff;
+	border-radius: 12px;
+	padding: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.05);
+}
+.gallery-slider-viewport 
+{ 
+	overflow: hidden; 
+	flex: 1; 
+}
+.gallery-slider-track 
+{
+    display: flex; 
+	gap: 10px;
+    transition: transform .4s ease;
+    will-change: transform;
+}
+.gallery-thumb 
+{
+    flex: 0 0 auto; 
+	width: 130px; 
+	border-radius: 10px;
+    overflow: hidden; 
+	cursor: pointer; 
+	background: #f4f4f4;
+    position: relative;
+    transition: transform .3s, box-shadow .3s, filter .3s, border-radius .3s, background .3s;
+}
+.gallery-thumb img 
+{ 
+	width: 100%; 
+	height: 90px; 
+	object-fit: cover; 
+	display: block; 
+}
+.gallery-thumb__name 
+{
+    display: block; 
+	padding: 6px 8px; 
+	font-size: 12px;
+    text-align: center; 
+	color: #555;
+    white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis;
+}
+.gallery-thumb:hover 
+{ 
+	transform: translateY(-3px); 
+	box-shadow: 0 6px 14px rgba(0,0,0,.12); 
+}
+.gallery-thumb.is-active 
+{ 
+	outline: 3px solid var(--accent); 
+	outline-offset: -3px; 
+}
+
+/* Класс, который переключается кнопкой (п.8) */
+.gallery-thumb--alt 
+{ 
+	filter: grayscale(1) brightness(.85); 
+	border-radius: 50% 50% 10px 10px; 
+	background: #ffe9a8; 
+}
+.gallery-thumb--alt .gallery-thumb__name 
+{ 
+	font-style: italic; 
+}
+.gallery-large--alt 
+{ 
+	outline: 4px dashed var(--accent); 
+	outline-offset: -8px; 
+}
+
+.slider-btn 
+{
+    background: var(--accent); 
+	color: #fff; 
+	border: none;
+    width: 44px; 
+	height: 44px; 
+	border-radius: 50%;
+    font-size: 24px; 
+	cursor: pointer; 
+	flex: 0 0 auto;
+    line-height: 1; 
+	transition: background .3s;
+}
+.slider-btn:hover 
+{ 
+	background: var(--accent-dark); 
+}
+
+/* Accordion + Datepicker */
+.gallery-extra 
+{ 
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	gap: 30px; 
+	align-items: start; 
+}
+
+@media (max-width: 900px) 
+{ 
+	.gallery-extra 
+	{ 
+		grid-template-columns: 1fr; 
+	} 
+}
+
+#gallery-accordion 
+{
+    background: #fff; 
+	border-radius: 12px; 
+	overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,.05);
+}
+#gallery-accordion h3 
+{
+    background: #fff; 
+	color: #333; 
+	padding: 16px 20px;
+    border-bottom: 1px solid #eee; 
+	margin: 0; 
+	font-size: 16px;
+}
+#gallery-accordion h3.ui-state-active 
+{ 
+	background: var(--accent); 
+	color: #fff; 
+}
+#gallery-accordion div 
+{ 
+	padding: 12px 20px; 
+	border: none; 
+}
+
+.gallery-date 
+{
+    background: #fff; 
+	padding: 24px; 
+	border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.05); 
+	margin-bottom: 20px;
+}
+.gallery-date label 
+{ 
+	display: block; 
+	font-weight: 600; 
+	margin-bottom: 10px; 
+	color: #555; 
+}
+.gallery-date input 
+{
+    padding: 12px 16px; 
+	border: 2px solid #ddd; 
+	border-radius: 8px;
+    font-family: inherit; 
+	font-size: 16px; 
+	width: 100%; 
+	max-width: 300px;
+}
+
+#gallery-toggle-class 
+{ 
+	display: block; 
+}

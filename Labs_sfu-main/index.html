@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,13 @@
     <link href="css/style_news.css" rel="stylesheet" type="text/css" />
     <link href="css/style_donate.css" rel="stylesheet" type="text/css" />
     <link href="css/style_footer.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link href="css/style_gallery.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
+
+<script src="js/script.js" type="text/javascript"></script>
 
 
     <!-- заглавие  ### <header>, <nav>, <ul>, <li>, <a>, <img>, <div> ### -->
@@ -60,7 +65,7 @@
     </section>
 
 
-    <section id="about" class="about container">
+    <section id="about">
         <div class="about__text">
             <h2>О фонде</h2>
             <p><strong>Наша цель</strong> — сохранить уникальную живую природу России в гармонии с человеком, объединяя экспертов, ответственный бизнес и неравнодушных людей.</p>
@@ -78,32 +83,32 @@
 
 
     <section id="work" class="work">
-    <div class="container">
-        <h2 class="section-title">Что мы делаем</h2>
+        <div class="container">
+            <h2 class="section-title">Что мы делаем</h2>
 
-        <div class="cards">
-            <article class="card">
-                <img src="img/haber.jpg" alt="Растительный мир">
-                <h3>Растительный мир</h3>
-                <p>Сохраняем редкие растения и восстанавливаем леса.</p>
-                <a href="#" class="card__link">Подробнее →</a>
-            </article>
+            <div class="cards">
+                <article class="card">
+                    <img src="img/haber.jpg" alt="Растительный мир">
+                    <h3>Растительный мир</h3>
+                    <p>Сохраняем редкие растения и восстанавливаем леса.</p>
+                    <a href="#" class="card__link">Подробнее...</a>
+                </article>
 
-            <article class="card">
-                <img src="img/animal.jpg" alt="Животный мир">
-                <h3>Животный мир</h3>
-                <p>Защищаем снежных барсов, песцов и других редких животных.</p>
-                <a href="#" class="card__link">Подробнее →</a>
-            </article>
+                <article class="card">
+                    <img src="img/animal.jpg" alt="Животный мир">
+                    <h3>Животный мир</h3>
+                    <p>Защищаем снежных барсов, песцов и других редких животных.</p>
+                    <a href="#" class="card__link">Подробнее...</a>
+                </article>
 
-            <article class="card">
-                <img src="img/metio.jpg" alt="Климат">
-                <h3>Климат</h3>
-                <p>Развиваем климатические проекты и углеродные исследования.</p>
-                <a href="#" class="card__link">Подробнее →</a>
-            </article>
+                <article class="card">
+                    <img src="img/metio.jpg" alt="Климат">
+                    <h3>Климат</h3>
+                    <p>Развиваем климатические проекты и углеродные исследования.</p>
+                    <a href="#" class="card__link">Подробнее...</a>
+                </article>
+            </div>
         </div>
-    </div>
     </section>
 
 
@@ -113,22 +118,22 @@
 
         <ul class="news__list">
             <li class="news-item">
-                <img src="img/new_3" alt="">
+                <img src="img/new_3.jpg" alt="">
                 <time>02.10.2026</time>
                 <h3>В Дагестане расширят проект по сохранению камышового кота</h3>
-                <a href="#">Читать →</a>
+                <a href="#">Читать...</a>
             </li>
             <li class="news-item">
-                <img src="img/new_2" alt="">
+                <img src="img/new_2.jpg" alt="">
                 <time>01.10.2026</time>
                 <h3>Новые технологии помогут сохранять биоразнообразие</h3>
-                <a href="#">Читать →</a>
+                <a href="#">Читать...</a>
             </li>
             <li class="news-item">
-                <img src="img/new_1" alt="">
+                <img src="img/new_1.jpg" alt="">
                 <time>01.10.2026</time>
                 <h3>Опубликован второй рэнкинг добывающих компаний</h3>
-                <a href="#">Читать →</a>
+                <a href="#">Читать...</a>
             </li>
         </ul>
 
@@ -162,7 +167,7 @@
             <iframe
                 width="100%"
                 height="500"
-                src="https://www.youtube.com/watch?v=hz6-zU3Ud4M"
+                src="img/video-1.mp4"
                 title="О фонде"
                 allowfullscreen
                 loading="lazy">
@@ -202,6 +207,7 @@
     </div>
     </section>
 
+
     <footer class="footer">
     <div class="container footer__inner">
 
@@ -209,15 +215,12 @@
             <h3>Контакты</h3>
             <table class="contacts">
                 <tr>
-                    <td>Тел:</td>
                     <td><a href="tel:+74957271447">+7 495 727-14-47</a></td>
                 </tr>
                 <tr>
-                    <td>E-mail:</td>
                     <td><a href="mailto:info@naturepeople.ru">info@naturepeople.ru</a></td>
                 </tr>
                 <tr>
-                    <td>Адрес:</td>
                     <td>Москва, Соколово-Мещерская, 14к1</td>
                 </tr>
             </table>
@@ -245,10 +248,75 @@
     <p class="footer__copy">© Фонд «Природа и люди», 2026</p>
     </footer>
 
+	
+	<section id="gallery" class="gallery-section">
+    <div class="container">
+        <h2 class="section-title">Галерея</h2>
 
+        <!-- Progressbar -->
+        <div id="gallery-progress-wrap">
+            <div id="gallery-progress"></div>
+            <span id="gallery-progress-text">0%</span>
+        </div>
 
+        <!-- Tabs (категории) -->
+        <div id="gallery-tabs">
+            <ul>
+                <li><a href="#tab-all">Все</a></li>
+                <li><a href="#tab-animals">Животные</a></li>
+                <li><a href="#tab-plants">Растения</a></li>
+                <li><a href="#tab-landscape">Пейзажи</a></li>
+            </ul>
+            <div id="tab-all"       data-category="all"></div>
+            <div id="tab-animals"   data-category="animals"></div>
+            <div id="tab-plants"    data-category="plants"></div>
+            <div id="tab-landscape" data-category="landscape"></div>
+        </div>
 
+        <!-- Большое изображение + слайдер -->
+        <div class="gallery-main">
+            <div class="gallery-large">
+                <img id="gallery-large-img" src="" alt="">
+                <button class="gallery-nav prev" id="gallery-prev" type="button" aria-label="Предыдущее">‹</button>
+                <button class="gallery-nav next" id="gallery-next" type="button" aria-label="Следующее">›</button>
+                <div class="gallery-caption" id="gallery-caption"></div>
+            </div>
 
+            <div class="gallery-slider-wrap">
+                <button class="slider-btn prev" id="slider-prev" type="button" aria-label="Прокрутить влево">‹</button>
+                <div class="gallery-slider-viewport">
+                    <div class="gallery-slider-track" id="slider-track"></div>
+                </div>
+                <button class="slider-btn next" id="slider-next" type="button" aria-label="Прокрутить вправо">›</button>
+            </div>
+        </div>
+
+        <!-- Accordion + Datepicker + toggleClass -->
+        <div class="gallery-extra">
+            <div id="gallery-accordion">
+                <h3>О галерее</h3>
+                <div><p>Здесь собраны лучшие фотографии природы России.</p></div>
+                <h3>Как пользоваться</h3>
+                <div><p>Кликните по миниатюре — фото откроется в большом размере. Стрелки ‹ › переключают кадры, клавиши ← и → тоже работают.</p></div>
+                <h3>Категории</h3>
+                <div><p>Используйте вкладки выше, чтобы отфильтровать фотографии по категориям.</p></div>
+            </div>
+
+            <div>
+                <div class="gallery-date">
+                    <label for="gallery-datepicker">Выберите дату съёмки:</label>
+                    <input type="text" id="gallery-datepicker" placeholder="дд.мм.гггг" readonly>
+                </div>
+                <button id="gallery-toggle-class" class="btn" type="button">Сменить стиль миниатюр</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<!-- jQuery + jQuery UI + скрипт галереи -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+	<script src="js/gallery.js" type="text/javascript"></script>
 
 </body>
 </html>

@@ -9,12 +9,15 @@
 }
 
 .hero__img {
+    /* не выделяет дополнительное пространство под этот элемент */
     position: absolute;
     inset: 0;             /* top:0; right:0; bottom:0; left:0 */
     width: 100%;
     height: 100%;
-    object-fit: cover;    /* как background-size: cover */
+    /* заполняет протранство (не по размеру окна а по размеру картинки)*/
+    object-fit: cover;  
     z-index: 0;
+    /* задаем анимацию приблежения элемента */
     animation: zoomIn 8s ease-out infinite alternate;
 }
 
@@ -27,7 +30,8 @@
 }
 
 .hero__content {
-    position: relative;   /* выше overlay по z-index */
+    /* выделяет пространство но может располагаться поверх других элементов */
+    position: relative;
     z-index: 2;
     color: #fff;
     text-align: center;
@@ -36,7 +40,9 @@
 .hero__subtitle {
     font-size: 24px;
     text-transform: uppercase;
+    /* межбуквенное растояние */
     letter-spacing: 4px;
+    /* отступ внизу элемента */
     margin-bottom: 16px;
     opacity: 0;
     animation: fadeDown .8s .3s forwards;
@@ -44,6 +50,7 @@
 
 .hero__title {
     font-size: 60px;
+    /* меэстрочное растояние */
     line-height: 1.1;
     margin-bottom: 24px;
     opacity: 0;

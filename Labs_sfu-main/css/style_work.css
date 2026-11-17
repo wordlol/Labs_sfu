@@ -49,5 +49,4 @@
 /* При наведении — приподнимаем карточку и меняем фон */
 .card:hover {
     transform: translateY(-10px);
-    background: var(--dark);
 }

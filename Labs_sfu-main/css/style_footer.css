@@ -2,6 +2,7 @@
     background: var(--dark);
     color: #fff;
     padding: 80px 0 30px;
+     
 }
 
 .footer__inner {
@@ -11,7 +12,18 @@
     margin-bottom: 60px;
 }
 
-.footer__col { flex: 1 1 250px; }
+.footer__col { 
+    flex: 1 1 250px; 
+    color: var(--accent);
+    text-align: center;
+
+}
+
+h3 {
+
+text-align: center;
+
+}
 
 .footer__col h3 {
     font-size: 20px;
@@ -20,8 +32,10 @@
 }
 
 .contacts td {
+    text-align: center;
     padding: 6px 12px 6px 0;
     vertical-align: top;
+    color: var(--accent);
 }
 
 .contacts a {
@@ -30,7 +44,9 @@
     border-bottom: 1px solid transparent;
     transition: border-color .2s;
 }
-.contacts a:hover { border-bottom-color: var(--accent); }
+.contacts a:hover { 
+    border-bottom-color: var(--accent); 
+}
 
 .socials {
     list-style: none;
@@ -39,7 +55,7 @@
     gap: 12px;
 }
 .socials a {
-    color: #fff;
+    color: var(--accent);
     text-decoration: none;
     transition: color .3s;
 }
@@ -56,6 +72,8 @@
     border: 2px solid transparent;
     border-radius: 8px;
     font-family: inherit;
+    color: #414141;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
 }
 
 .footer__copy {

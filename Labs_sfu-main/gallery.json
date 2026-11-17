@@ -1,0 +1,14 @@
+{
+  "gallery": "Галерея природы",
+  "images": [
+    { "name": "Рысь",             "file": "img/cat.jpg",    "category": "animals"   },
+    { "name": "Собаки",           "file": "img/sobaci1.jpg","category": "animals"   },
+    { "name": "Экспедиция",       "file": "img/exped.jpg",  "category": "landscape" },
+    { "name": "Растительный мир", "file": "img/haber.jpg",  "category": "plants"    },
+    { "name": "Животный мир",     "file": "img/animal.jpg", "category": "animals"   },
+    { "name": "Климат",           "file": "img/metio.jpg",  "category": "landscape" },
+    { "name": "Новость 1",        "file": "img/new_1.jpg",  "category": "plants"    },
+    { "name": "Новость 2",        "file": "img/new_2.jpg",  "category": "landscape" },
+    { "name": "Новость 3",        "file": "img/new_3.jpg",  "category": "animals"   }
+  ]
+}

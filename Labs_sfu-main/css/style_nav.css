@@ -1,62 +1,75 @@
 /*сбрасываем отступы*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box; /* это делается чтобы падинг не увеличивал ширину*/
+    padding: 0; /* внутренние отступы */
+    margin: 0; /* внешние отступы */
+    box-sizing: border-box; /* определет поведение w h */
 }
 
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif; /* подключение шрифтов */
     font-size: 16px;
-    color: #808080;
-    background: #ffffff;
+    color: #808080; /*задачет цвет текста*/
+    /* задает цвет фона */
+    background: #ffffff; 
 }
 
+/* подходит для объявсления переменных */
 :root {
-    --accent: #43b8d6;
+    --accent: #43b8d6; /* переменные */
     --accent-dark: #109fab;
     --dark: #ffffff;
 }
 
 /*ограничивает ширину контейнера*/
 .contener {
+    /* ограничевает ширину контента */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .header {
-    position: sticky; /*закрепляет панель на верхней части сайта при скроле*/
+    position: sticky; /* sticky  закрепляет объект*/
+    /* определяет вертигальную позицию */
     top: 0;
+    /* распределяет элементы по стою z координат */
     z-index: 100;
     background: #555555;
+    /* добавляет тень к объекту */
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .header_init {
     display: flex; /*ставит элементы в один ряд*/
     align-items: center; /*выравнивание по вертикали*/
-    justify-content: space-between; 
+    /* выравнивание пространства между элементами */
+    justify-content: space-evenly; 
+    /* создает отступ между рядами элементов */
     gap: 30px;
+    /* определяет высоту внутренный области объекта */
     height: 120px;
 }
 
 .nav_list {
     display: flex;
     gap:80px;
-    list-style:none; /*убирает точки из списка*/
+    /* управляет свояйствами списка сего стилем отобажения */
+    list-style:none; 
 }
 
 .nav_list a {
-    text-decoration: none; /* убирает подчеркивание */
+    text-decoration: none; /* управляет декоративными свойствами строк */
     color: var(--dark); /* применение рутов */
+    /* начертание шрифта (его жирность) */
     font-weight: 800;
     position: relative;
-    transition: color .3s ease; /* плавное изменение цвета */
+    /* определяет переходное состояние элемента */
+    transition: color .3s ease; 
 }
 
 
-.nav_list a::after /*псевдоэлементы*/ {
+/* добавляет косметического контент на последний элемент */
+.nav_list a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -85,10 +98,13 @@ body {
     text-decoration: none;
     border-radius: 10px;
     font-weight: 700;
+    /* ставит все буквы в верхний регистр */
     text-transform: uppercase;
     font-size: 16px;
+    /* выставлет границы фигуры */
     border: 4px solid var(--accent);
     transition: background .3s, color .3s;
+    /* выставляет курсор при наведении */
     cursor: pointer;
 }
 
